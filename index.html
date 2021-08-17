@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Projeto CN</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+    <link href="./lib/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/css/default.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-light bg-dark">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">
+                <img src="./assets/img/favicon.png" alt="Projeto CN" width="25"
+                    class="bg-white d-inline-block border rounded-circle border-white align-text-top me-2">
+                Projeto CN
+            </a>
+        </div>
+    </nav>
+    <div class="container" id="container">
+        <div class="card border-dark">
+            <div class="card-header bg-dark text-white">
+                Input
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col row g-1">
+                        <label class="mb-1 col-12 text-center">Função</label>
+                        <div class="col-1"></div>
+                        <div class="col-1"><input type="text " class="form-control" id="function_1" /></div>
+                        <div class="col-1 text-center">xˆ5</div>
+                        <div class="col-1"><input type="text " class="form-control" id="function_2" /></div>
+                        <div class="col-1 text-center">xˆ4</div>
+                        <div class="col-1"><input type="text " class="form-control" id="function_3" /></div>
+                        <div class="col-1 text-center">xˆ3</div>
+                        <div class="col-1"><input type="text " class="form-control" id="function_4" /></div>
+                        <div class="col-1 text-center">xˆ2</div>
+                        <div class="col-1"><input type="text " class="form-control" id="function_5" /></div>
+                        <div class="col-1 text-center">x</div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-2"></div>
+                    <div class="col-12 text-center col-md-4">
+                        <label for="epsilon" class="mb-1">ε<small class="text-muted ms-1">(Valor da Precisão)</small>
+                        </label>
+                        <input type="text" class="form-control" id="epsilon" />
+                    </div>
+                    <div class="col-12 text-center col-md-4">
+                        <label for="epsilon" class="mb-1">&emsp;</label>
+                        <button id="btn-calc" class="btn btn-dark w-100">Calcular</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card border-dark mt-2">
+            <div class="card-header bg-dark text-white">
+                Output
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="output">
+                            Aguarde pelo resultado!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./lib/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
+    <script src="./assets/js/default.js"></script>
+</body>
+
+</html>

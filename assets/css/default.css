@@ -1,0 +1,12 @@
+#container {
+    margin-top: 100px;
+}
+
+.form-control:focus {
+    border-color: #b9b9b9;
+    box-shadow: none;
+}
+
+small {
+    font-size: 0.8em;
+}
