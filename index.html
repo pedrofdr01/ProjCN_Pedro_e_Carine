@@ -6,9 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/img/favicon.ico" />
-    <link href="./lib/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/css/default.css" rel="stylesheet" />
-
 </head>
 
 <body>
@@ -21,7 +20,7 @@
             </a>
         </div>
     </nav>
-    <div class="container" id="container">
+    <div class="container mb-5" id="container">
         <div class="card border-dark">
             <div class="card-header bg-dark text-white">
                 Input
@@ -29,26 +28,28 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col row g-1">
-                        <label class="mb-1 col-12 text-center">Função</label>
-                        <div class="col-1"></div>
-                        <div class="col-1"><input type="text " class="form-control" id="function_1" /></div>
-                        <div class="col-1 text-center">xˆ5</div>
-                        <div class="col-1"><input type="text " class="form-control" id="function_2" /></div>
-                        <div class="col-1 text-center">xˆ4</div>
-                        <div class="col-1"><input type="text " class="form-control" id="function_3" /></div>
-                        <div class="col-1 text-center">xˆ3</div>
-                        <div class="col-1"><input type="text " class="form-control" id="function_4" /></div>
-                        <div class="col-1 text-center">xˆ2</div>
-                        <div class="col-1"><input type="text " class="form-control" id="function_5" /></div>
-                        <div class="col-1 text-center">x</div>
+                        <div class="col-1">
+                            <label class="col-12 text-center">F(x) =</label>
+                        </div>
+                        <div class="col-1"><input type="number" class="form-control" id="function_x5" /></div>
+                        <div class="col-1 text-center">xˆ5 +</div>
+                        <div class="col-1"><input type="number" class="form-control" id="function_x4" /></div>
+                        <div class="col-1 text-center">xˆ4 +</div>
+                        <div class="col-1"><input type="number" class="form-control" id="function_x3" /></div>
+                        <div class="col-1 text-center">xˆ3 +</div>
+                        <div class="col-1"><input type="number" class="form-control" id="function_x2" /></div>
+                        <div class="col-1 text-center">xˆ2 +</div>
+                        <div class="col-1"><input type="number" class="form-control" id="function_x" /></div>
+                        <div class="col-1 text-center">x +</div>
+                        <div class="col-1"><input type="number" class="form-control" id="function_n" /></div>
                     </div>
                 </div>
                 <div class="row mt-2">
                     <div class="col-md-2"></div>
                     <div class="col-12 text-center col-md-4">
-                        <label for="epsilon" class="mb-1">ε<small class="text-muted ms-1">(Valor da Precisão)</small>
-                        </label>
-                        <input type="text" class="form-control" id="epsilon" />
+                        <label for="epsilon" class="mb-1">ε<small class="text-muted ms-1">(Valor da
+                                Precisão)</small></label>
+                        <input type="number" class="form-control" id="epsilon" />
                     </div>
                     <div class="col-12 text-center col-md-4">
                         <label for="epsilon" class="mb-1">&emsp;</label>
@@ -64,17 +65,29 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-12">
-                        <div id="output">
-                            Aguarde pelo resultado!
-                        </div>
+                        <div id="output_info" class="mb-2"></div>
+                        <div id="output_info_graph" class="mb-2"></div>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>N.º Iteração</th>
+                                    <th>a</th>
+                                    <th>F(a)</th>
+                                    <th>b</th>
+                                    <th>F(b)</th>
+                                    <th>x</th>
+                                    <th>F(x)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="output"></tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./lib/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/function-plot/dist/function-plot.js"></script>
     <script src="./assets/js/default.js"></script>
 </body>
 

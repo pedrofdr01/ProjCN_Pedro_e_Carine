@@ -10,3 +10,15 @@
 small {
     font-size: 0.8em;
 }
+
+.btn-check:focus+.btn-dark,
+.btn-dark:focus {
+    box-shadow: none;
+}
+
+#output_info_graph {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
