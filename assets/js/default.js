@@ -104,12 +104,11 @@ function defineInterval() {
 
     var last = results[0].result;
     for (i = 1; i < results.length; i++)
-        if ((last * results[i].result) <= 0)
-            if (interval.length < 2) {
-                interval.push(results[i].index)
-                interval_initial.push(results[i].index)
-                last = results[i].result
-            }
+        if ((last * results[i].result) <= 0) {
+            interval.push(results[i].index)
+            interval_initial.push(results[i].index)
+            last = results[i].result
+        }
 
 }
 
@@ -150,7 +149,7 @@ function initialize() {
         epsilon = parseFloat($("#epsilon").val());
 
     if (x5 != 0)
-        func += `${x5 != 1 ? x4+"*" : ""}x^5`;
+        func += `${x5 != 1 ? x5+"*" : ""}x^5`;
 
     if (x4 != 0)
         func += (func == "" ? "" : (x4 < 0 ? "" : "+")) + `${x4 != 1 ? x4+"*" : ""}x^4`;
